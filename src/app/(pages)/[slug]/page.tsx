@@ -19,7 +19,7 @@ import { Gutter } from '../../_components/Gutter'
 // If you are not using Payload Cloud then this line can be removed, see `../../../README.md#cache`
 export const dynamic = 'force-dynamic'
 
-import classes from './index.module.scss';
+import classes from './index.module.scss'
 import Categories from '../../_components/Categories'
 import Promotion from '../../_components/Promotion'
 
@@ -27,7 +27,7 @@ export default async function Page({ params: { slug = 'home' } }) {
   const { isEnabled: isDraftMode } = draftMode()
 
   let page: Page | null = null
-  let categories : Category[] | null = null
+  let categories: Category[] | null = null
   try {
     page = await fetchDoc<Page>({
       collection: 'pages',
@@ -61,7 +61,7 @@ export default async function Page({ params: { slug = 'home' } }) {
         <section>
           <Hero {...hero} />
           <Gutter className={classes.home}>
-            <Categories categories={categories}/>
+            <Categories categories={categories} />
             <Promotion />
           </Gutter>
         </section>
@@ -69,10 +69,10 @@ export default async function Page({ params: { slug = 'home' } }) {
         <>
           <Hero {...hero} />
           <Blocks
-           blocks={layout}
-          disableTopPadding={!hero || hero?.type === 'none' || hero?.type === 'lowImpact'}
+            blocks={layout}
+            disableTopPadding={!hero || hero?.type === 'none' || hero?.type === 'lowImpact'}
           />
-        </>  
+        </>
       )}
     </React.Fragment>
   )
