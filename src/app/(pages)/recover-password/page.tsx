@@ -14,25 +14,31 @@ export default async function RecoverPassword() {
   return (
     <section className={classes.recoverPassword}>
       <div className={classes.heroImg}>
-          <Link href="/">
-              <Image src="/logo-black.svg" alt="Logo" width={100} height={50} className={classes.logo}/>
-            </Link>
+        <Link href="/">
+          <Image
+            src="/logo-black.svg"
+            alt="Logo"
+            width={100}
+            height={50}
+            className={classes.logo}
+          />
+        </Link>
       </div>
 
       <div className={classes.formWrapper}>
         <div className={classes.formContainer}>
-          <RenderParams className={classes.params}/>
-          
+          <RenderParams className={classes.params} />
+
           <Link href="/login" className={classes.backLink}>
-            <Image src="/assets/icons/arrow-left.svg" alt='left arrow' width={25} height={25}/>
+            <Image src="/assets/icons/arrow-left.svg" alt="left arrow" width={25} height={25} />
             <p>Back</p>
           </Link>
-          
+
           <div className={classes.formTitle}>
             <h3>Forgot Password!</h3>
           </div>
 
-          <RecoverPasswordForm/>
+          <RecoverPasswordForm />
         </div>
       </div>
     </section>

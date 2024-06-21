@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 import { Header } from '../../../payload/payload-types'
 import { fetchHeader } from '../../_api/fetchGlobals'
-import HeaderComponenet from './HeaderComponent';
+import HeaderComponenet from './HeaderComponent'
 
 export async function Header() {
   let header: Header | null = null
@@ -15,12 +15,12 @@ export async function Header() {
   try {
     header = await fetchHeader()
   } catch (error) {
-    console.log('Error fetching header');
+    console.log('Error fetching header')
   }
 
   return (
     <>
-      <HeaderComponenet header={header}/>
+      <HeaderComponenet header={header} />
     </>
   )
 }
